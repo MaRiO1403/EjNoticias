@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Practica3</string>
+    <string name="sp_first_time" />
+    <string name="sp_username" />
+    <string name="hint_username" />
+    <string name="register_succes" />
+    <string name="titulo1">Mundial de fútbol 2026</string>
+    <string name="descripcion1">El Mundial de Fútbol 2026 se celebrará en Estados Unidos, México y Canadá, que implica distancias y desplazamientos bastantes largos entre sedes. Además, el Mundial 2026 estrenará formato siendo el primero en la historia de la competencia en disputarse con 48 equipos.</string>
+    <string name="titulo2">Tarjeta Gráfica RTX5090</string>
+    <string name="descripcion2">Pensaba que el gaming en PC no podría volver a sorprenderme. Hasta que probé DLSS 4 en una RTX 5090.</string>
+    <string name="titulo3">PlayStation5 Pro</string>
+    <string name="descripcion3">La consola llega con especificaciones mejoradas para afrontar la próxima oleada de títulos con gráficos más exigentes, aunque también es una buena manera de disfrutar de los vigentes títulos de la consola de Sony y de generaciones pasadas con un mejor rendimiento.</string>
+    <string name="titulo4">Mundial de fútbol 2030</string>
+    <string name="descripcion4"> La sede para el Mundial 2030 que flaquea no es A Coruña, sino San Sebastián. La candidatura de Valencia da pasos de gigante con el apoyo de la RFEF mientras crecen las dudas sobre la capital guipuzcoana y Málaga.</string>
+    <string name="titulo5">Iphone 17</string>
+    <string name="descripcion5">El iPhone 17 ya es una realidad más allá de la mente de quienes quieren hacerse cuanto antes con el último modelo. Apple revoluciona el mercado constantemente con nuevos modelos que llaman la atención de cientos de compradores que esperan cada año las novedades en sus dispositivos móviles.</string>
+    <string name="titulo6">Nintendo Switch 2</string>
+    <string name="descripcion6">Nintendo siempre termina dando la sorpresa. Mucho se ha hablado en las últimas semanas de la Switch 2, la nueva consola que la desarrolladora debía sacar a la venta en este 2025.</string>
+    <string name="titulo7">Supercopa 2024/2025</string>
+    <string name="descripcion7">El Barcelona se proclamó campeón de la Supercopa de España 2024/25 tras ganar por 2-5 al Real Madrid en la final. Mbappé abrió el marcador, pero los blaugranas castigaron la fragilidad defensiva de los blancos con goles de Lamine Yamal, Lewandowski, Raphinha, por partida doble, y Balde.</string>
+    <string name="titulo8">Incendo en Los Angeles</string>
+    <string name="descripcion8">Las llamas siguen rodeando la ciudad de Los Ángeles después de más de una semana de incendios. Algunos han sido provocados, aunque aún no se ha establecido la causa de todos los focos detectados.</string>
+    <string name="titulo9">Meta</string>
+    <string name="descripcion9">Meta desarrolla un traductor simultáneo de hasta 101 idiomas con una mayor precisión que los sistemas actuales.</string>
+    <string name="titulo10">Cristiano Ronaldo</string>
+    <string name="descripcion10">Cristiano Ronaldo seguirá ligado al Al Nassr tras aceptar una oferta histórica que no solo refuerza su posición como el futbolista mejor pagado del mundo, sino que también lo convierte en parte propietario del club.</string>
+</resources>
