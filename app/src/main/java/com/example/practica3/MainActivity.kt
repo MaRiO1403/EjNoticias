@@ -11,6 +11,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.textfield.TextInputEditText
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -22,41 +23,36 @@ class MainActivity : AppCompatActivity() {
 
         val textoNombre = findViewById<TextInputEditText>(R.id.introducirNombre)
         val textoPassw = findViewById<TextInputEditText>(R.id.introducirPass)
-        val savedButton = findViewById<Button>(R.id.button)
-        val sharedPreferences = getSharedPreferences("", Context.MODE_PRIVATE)
+        val botonLogin = findViewById<Button>(R.id.button)
 
-        savedButton.setOnClickListener {
-            val savedNom = sharedPreferences.getString("user_name", null)
-            val savedPass = sharedPreferences.getString("user_pass", null)
+        val sharedPreferences = getSharedPreferences("user_preferences", Context.MODE_PRIVATE)
 
-            if (savedNom.isNullOrEmpty() || savedPass.isNullOrEmpty()) {
+        val savedNom = sharedPreferences.getString("user_name", "")
+        val savedPass = sharedPreferences.getString("user_pass", "")
 
-                val nom = textoNombre.text.toString().trim()
-                val passw = textoPassw.text.toString().trim()
+        if (!savedNom.isNullOrEmpty()) {
+            textoNombre.setText(savedNom)
+        }
+        if (!savedPass.isNullOrEmpty()) {
+            textoPassw.setText(savedPass)
+        }
 
-                if (nom.isNotEmpty() && passw.isNotEmpty()) {
-                    val editor = sharedPreferences.edit()
-                    editor.putString("user_name", nom)
-                    editor.putString("user_pass", passw)
-                    editor.apply()
-                    Toast.makeText(this, "Usuario guardado", Toast.LENGTH_SHORT).show()
-                } else {
-                    Toast.makeText(this, "Por favor, rellena ambos campos", Toast.LENGTH_SHORT).show()
-                }
-            } else {
-                val nom = textoNombre.text.toString().trim()
-                val passw = textoPassw.text.toString().trim()
+        botonLogin.setOnClickListener {
+            val nom = textoNombre.text.toString().trim()
+            val passw = textoPassw.text.toString().trim()
 
-                if (nom.isNullOrEmpty() || passw.isNullOrEmpty()) {
-                    Toast.makeText(this, "Por favor, rellena ambos campos", Toast.LENGTH_SHORT).show()
-                    return@setOnClickListener
-                }
+            if (nom.isNotEmpty() && passw.isNotEmpty()) {
+                val editor = sharedPreferences.edit()
+                editor.putString("user_name", nom)
+                editor.putString("user_pass", passw)
+                editor.apply()
 
-                textoNombre.setText(savedNom)
-                textoPassw.setText(savedPass)
-                Toast.makeText(this, "Datos cargados correctamente", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Usuario guardado", Toast.LENGTH_SHORT).show()
+
                 val intent = Intent(this, NoticiasActivity::class.java)
                 startActivity(intent)
+            } else {
+                Toast.makeText(this, "No pueden haber campos vacios", Toast.LENGTH_SHORT).show()
             }
         }
     }
